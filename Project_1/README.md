@@ -40,3 +40,70 @@ conda activate cnncls
 ```bash
 pip install -r requirements.txt
 ```
+
+
+```bash
+# Finally run the following command
+python app.py
+```
+
+Now,
+```bash
+open up you local host and port
+```
+
+
+## MLflow
+
+- [Documentation](https://mlflow.org/docs/latest/index.html)
+
+
+##### cmd
+- mlflow ui
+
+
+### dagshub
+[dagshub](https://dagshub.com/)
+
+MLFLOW_TRACKING_URI=https://dagshub.com/DHANUSHLINGAN/MLOps-Projects.mlflow \
+MLFLOW_TRACKING_USERNAME=DHANUSHLINGAN \
+MLFLOW_TRACKING_PASSWORD=c0aff57a24c14dceb34be2c0ffe3cc1a914d4485 \
+python script.py
+Run this to export as env variables:
+
+```bash
+
+
+
+
+
+
+
+
+
+
+
+
+### DVC cmd
+
+1. dvc init
+2. dvc repro
+3. dvc dag
+
+
+
+
+## About MLflow & DVC
+
+MLflow
+
+ - Its Production Grade
+ - Trace all of your expriements
+ - Logging & taging your model
+
+
+DVC 
+
+ - Its very lite weight for POC only
+ - lite weight expriements tracker
+ - It can perform Orchestration (Creating Pipelines)

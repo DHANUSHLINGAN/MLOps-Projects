@@ -8,7 +8,7 @@ __version__ = "0.0.0"
 
 REPO_NAME = "Kidney-Disease-Classification-Deep-Learning-Project"
 AUTHOR_USER_NAME = "DHANUSHLINGAN"
-SRC_REPO = "cnnClassifier"
+SRC_REPO = "src/cnnClassifier"
 AUTHOR_EMAIL = "dhanushanandan12@gmail.com"
 
 
@@ -25,5 +25,5 @@ setuptools.setup(
         "Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",
     },
     package_dir={"": "src"},
-    packages=setuptools.find_packages(where="src")
+    packages=setuptools.find_packages(where="Project_1/src")
 )

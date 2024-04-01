@@ -205,3 +205,13 @@ Traceback (most recent call last):
     raise IOError(
 OSError: No file or directory found at model\model.h5
 [2024-03-28 19:14:12,575: INFO: _internal: 127.0.0.1 - - [28/Mar/2024 19:14:12] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-04-01 11:45:04,064: INFO: stage_04_model_evaluation: *******************]
+[2024-04-01 11:45:04,065: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-04-01 11:45:04,078: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-01 11:45:04,082: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-01 11:45:04,084: INFO: common: created directory at: artifacts]
+[2024-04-01 11:45:15,222: INFO: common: json file saved at: scores.json]
+[2024-04-01 11:45:15,223: INFO: common: json file saved at: scores.json]
+[2024-04-01 11:45:15,223: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]

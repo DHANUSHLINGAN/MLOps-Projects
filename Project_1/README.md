@@ -28,11 +28,11 @@ https://github.com/DHANUSHLINGAN/MLOps-Projects.git
 ### STEP 01- Create a conda environment after opening the repository
 
 ```bash
-conda create -n cnncls python=3.8 -y
+conda create -n clas python=3.8 -y
 ```
 
 ```bash
-conda activate cnncls
+conda activate clas
 ```
 
 
@@ -64,7 +64,7 @@ open up you local host and port
 
 ### dagshub
 [dagshub](https://dagshub.com/)
-
+# Create your own dagshub server
 MLFLOW_TRACKING_URI=https://dagshub.com/DHANUSHLINGAN/MLOps-Projects.mlflow \
 MLFLOW_TRACKING_USERNAME=DHANUSHLINGAN \
 MLFLOW_TRACKING_PASSWORD=c0aff57a24c14dceb34be2c0ffe3cc1a914d4485 \
@@ -72,17 +72,6 @@ python script.py
 Run this to export as env variables:
 
 ```bash
-
-
-
-
-
-
-
-
-
-
-
 
 ### DVC cmd
 

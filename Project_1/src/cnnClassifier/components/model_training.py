@@ -22,7 +22,7 @@ class Training:
         datagenerator_kwargs = dict(
             rescale = 1./255,
             validation_split=0.20
-        ) 
+        )
 
         dataflow_kwargs = dict(
             target_size=self.config.params_image_size[:-1],
@@ -85,4 +85,3 @@ class Training:
             path=self.config.trained_model_path,
             model=self.model
         )
-

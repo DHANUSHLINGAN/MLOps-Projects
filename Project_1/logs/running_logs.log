@@ -107,3 +107,101 @@ x==========x]
 [2024-03-13 08:41:00,031: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
 
 x==========x]
+[2024-03-26 18:08:40,185: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-03-26 18:08:40,187: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-03-26 18:08:40,190: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-03-26 18:08:40,191: INFO: common: created directory at: artifacts]
+[2024-03-26 18:08:40,191: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-03-26 18:08:40,191: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1zVDEEdASmLjU-Z3jIe0GtID_DhEINf0_/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-03-26 18:08:52,634: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1zVDEEdASmLjU-Z3jIe0GtID_DhEINf0_/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-03-26 18:08:53,086: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-03-26 18:09:02,146: INFO: stage_02_prepare_base_model: *******************]
+[2024-03-26 18:09:02,146: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2024-03-26 18:09:02,149: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-03-26 18:09:02,150: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-03-26 18:09:02,150: INFO: common: created directory at: artifacts]
+[2024-03-26 18:09:02,150: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-03-26 18:09:02,521: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-03-26 18:09:02,664: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-03-26 18:35:11,145: INFO: stage_03_model_training: *******************]
+[2024-03-26 18:35:11,145: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2024-03-26 18:35:11,147: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-03-26 18:35:11,148: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-03-26 18:35:11,149: INFO: common: created directory at: artifacts]
+[2024-03-26 18:35:11,149: INFO: common: created directory at: artifacts\training]
+[2024-03-26 18:36:08,628: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-03-26 18:36:14,876: INFO: stage_04_model_evaluation: *******************]
+[2024-03-26 18:36:14,876: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-03-26 18:36:14,879: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-03-26 18:36:14,881: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-03-26 18:36:14,881: INFO: common: created directory at: artifacts]
+[2024-03-26 18:36:26,048: INFO: common: json file saved at: scores.json]
+[2024-03-26 18:36:26,048: INFO: common: json file saved at: scores.json]
+[2024-03-26 18:36:26,048: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2024-03-28 19:11:55,076: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.98.0.22:8080]
+[2024-03-28 19:11:55,077: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-03-28 19:12:20,533: INFO: _internal: 127.0.0.1 - - [28/Mar/2024 19:12:20] "GET / HTTP/1.1" 200 -]
+[2024-03-28 19:13:35,493: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\dhanu\anaconda3\envs\kidne\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\dhanu\anaconda3\envs\kidne\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\dhanu\anaconda3\envs\kidne\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\dhanu\anaconda3\envs\kidne\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\dhanu\anaconda3\envs\kidne\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\dhanu\anaconda3\envs\kidne\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "D:\Projects\Github\MLOps-Projects\Project_1\src\cnnClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\dhanu\anaconda3\envs\kidne\lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "C:\Users\dhanu\anaconda3\envs\kidne\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\dhanu\anaconda3\envs\kidne\lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2024-03-28 19:13:35,500: INFO: _internal: 127.0.0.1 - - [28/Mar/2024 19:13:35] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-03-28 19:14:06,324: INFO: _internal: 127.0.0.1 - - [28/Mar/2024 19:14:06] "GET / HTTP/1.1" 200 -]
+[2024-03-28 19:14:12,573: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\dhanu\anaconda3\envs\kidne\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\dhanu\anaconda3\envs\kidne\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\dhanu\anaconda3\envs\kidne\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\dhanu\anaconda3\envs\kidne\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\dhanu\anaconda3\envs\kidne\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\dhanu\anaconda3\envs\kidne\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "D:\Projects\Github\MLOps-Projects\Project_1\src\cnnClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\dhanu\anaconda3\envs\kidne\lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "C:\Users\dhanu\anaconda3\envs\kidne\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\dhanu\anaconda3\envs\kidne\lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2024-03-28 19:14:12,575: INFO: _internal: 127.0.0.1 - - [28/Mar/2024 19:14:12] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]

@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Github/MLOps-Projects/Project_1/mlruns/0/6b8fe6787d6b49d7bfb1f56428bfa386/artifacts
+end_time: 1711960814613
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6b8fe6787d6b49d7bfb1f56428bfa386
+run_name: gregarious-ray-27
+run_uuid: 6b8fe6787d6b49d7bfb1f56428bfa386
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1711960806566
+status: 3
+tags: []
+user_id: dhanu

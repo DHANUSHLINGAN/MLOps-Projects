@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Github/MLOps-Projects/Project_1/mlruns/0/cb37211eaefd4e48844ada5f914577a1/artifacts
+end_time: 1712047338295
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: cb37211eaefd4e48844ada5f914577a1
+run_name: salty-bat-418
+run_uuid: cb37211eaefd4e48844ada5f914577a1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1712047324464
+status: 3
+tags: []
+user_id: dhanu
